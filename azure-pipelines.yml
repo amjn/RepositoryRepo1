@@ -9,6 +9,7 @@ resources:
      type: GitHub
      connection: GithubConnection
      source: jainamanjain/Test2
+     name: jainamanjain/Test2
 
 jobs:
   - job: J1
