@@ -7,7 +7,7 @@ resources:
  repositories:
    - repository: repo1
      type: GitHub
-     connection: GithubConnection
+     endpoint: GithubConnection
      source: jainamanjain/Test2
      name: jainamanjain/Test2
 
