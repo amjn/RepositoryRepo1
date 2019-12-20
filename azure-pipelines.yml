@@ -16,7 +16,7 @@ resources:
   #    source: amja_bitbucket/bitbucketrepo
   #    name: amja_bitbucket/bitbucketrepo
    - repository: AzRepo1
-     type: AzureRepo
+     type: TfsGit
     #  endpoint: BitBucketConnection
      source: AzureRepo1
      name: AzureRepo1
