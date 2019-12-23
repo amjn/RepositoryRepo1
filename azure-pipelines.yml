@@ -25,7 +25,7 @@ jobs:
   - job: J1
     pool: Default
     steps:
-    - checkout: AzRepo1
+    # - checkout: AzRepo1
     - powershell: |
             ls $(Build.ArtifactStagingDirectory)/ 
 
