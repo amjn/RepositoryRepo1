@@ -18,8 +18,7 @@ resources:
    - repository: AzRepo1
     #  type: TfsGit
     #  endpoint: BitBucketConnection
-     key: AzureRepo1
-     source: AzureRepo1
+     type: git
      name: AzureRepo1
 
 jobs:
