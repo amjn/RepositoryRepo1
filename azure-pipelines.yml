@@ -23,6 +23,20 @@ resources:
 
 jobs:
   - job: J1
+    pool: Default
     steps:
+    - checkout: AzRepo1
     - powershell: |
             ls $(Build.ArtifactStagingDirectory)/ 
+
+  - deployment: deploymentJob4
+    environment: envionment4
+    pool: default
+    strategy:
+     runOnce:
+      deploy:
+       steps:
+        - checkout: self
+        - checkout: AzRepo1
+        - powershell: |
+            ls $(Build.ArtifactStagingDirectory)/
