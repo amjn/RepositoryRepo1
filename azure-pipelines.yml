@@ -31,7 +31,7 @@ jobs:
 
   - deployment: deploymentJob4
     environment: envionment4
-    pool: default
+    pool: Default
     strategy:
      runOnce:
       deploy:
