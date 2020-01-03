@@ -10,16 +10,16 @@ resources:
   #    endpoint: GithubConnection
   #    source: jainamanjain/Test2
   #    name: jainamanjain/Test2
-  #  - repository: bitbucket1
-  #    type: BitBucket
-  #    endpoint: BitBucketConnection
-  #    source: amja_bitbucket/bitbucketrepo
-  #    name: amja_bitbucket/bitbucketrepo
-   - repository: AzRepo1
-    #  type: TfsGit
-    #  endpoint: BitBucketConnection
-     type: git
-     name: AzureRepo1
+   - repository: bitbucket1
+     type: BitBucket
+     endpoint: BitBucketConnection
+     source: amja_bitbucket/bitbucketrepo
+     name: amja_bitbucket/bitbucketrepo
+  #  - repository: AzRepo1
+  #   #  type: TfsGit
+  #   #  endpoint: BitBucketConnection
+  #    type: git
+  #    name: AzureRepo1
 
 jobs:
   - job: J1
@@ -37,6 +37,6 @@ jobs:
       deploy:
        steps:
         - checkout: self
-        - checkout: AzRepo1
+        - checkout: bitbucket1
         - powershell: |
             ls $(Build.ArtifactStagingDirectory)/
