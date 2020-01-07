@@ -21,6 +21,16 @@ resources:
      type: git
      name: AzureRepo1
 
+ containers:
+  - container: ACRResourceLatest
+    type: ACR
+    azureSubscription: ARM_Manual
+    resourceGroup: anumitaReg
+    registry: abhisheaAcr
+    repository: acr_container_repo1
+  - container: DockerHubContainer
+    endpoint: DockerHubConnection
+    image: amjadocker/dockercontainerrepository1111
 jobs:
   - job: J1
     pool: Default
