@@ -4,6 +4,11 @@
 # https://aka.ms/yaml
 
 resources:
+ pipelines:
+   - pipeline: P1
+    #  project: Project1
+     source: jainamanjain.Test2
+
  repositories:
    - repository: githubRepo1
      type: GitHub
