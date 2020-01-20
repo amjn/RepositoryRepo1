@@ -13,33 +13,33 @@ resources:
      project: Project1
      source: jainamanjain.Test2
 
-#  repositories:
-#    - repository: githubRepo1
-#      type: GitHub
-#      endpoint: GithubConnection
-#      source: jainamanjain/Test2
-#      name: jainamanjain/Test2
-#    - repository: bitbucket1
-#      type: BitBucket
-#      endpoint: BitBucketConnection
-#      source: amja_bitbucket/bitbucketrepo
-#      name: amja_bitbucket/bitbucketrepo
-#    - repository: AzRepo1
-#     #  type: TfsGit
-#     #  endpoint: BitBucketConnection
-#      type: git
-#      name: AzureRepo1
+  repositories:
+   - repository: githubRepo1
+     type: GitHub
+     endpoint: GithubConnection
+     source: jainamanjain/Test2
+     name: jainamanjain/Test2
+   - repository: bitbucket1
+     type: BitBucket
+     endpoint: BitBucketConnection
+     source: amja_bitbucket/bitbucketrepo
+     name: amja_bitbucket/bitbucketrepo
+   - repository: AzRepo1
+    #  type: TfsGit
+    #  endpoint: BitBucketConnection
+     type: git
+     name: AzureRepo1
 
-#  containers:
-#   - container: ACRResourceLatest
-#     type: ACR
-#     azureSubscription: ARM_Manual
-#     resourceGroup: anumitaReg
-#     registry: abhisheaAcr
-#     repository: acrcontainerrepository1111
-#   - container: DockerHubContainer
-#     endpoint: DockerHubConnection
-#     image: amjadocker/dockercontainerrepository1111
+  containers:
+  - container: ACRResourceLatest
+    type: ACR
+    azureSubscription: ARM_Manual
+    resourceGroup: anumitaReg
+    registry: abhisheaAcr
+    repository: acrcontainerrepository1111
+  - container: DockerHubContainer
+    endpoint: DockerHubConnection
+    image: amjadocker/dockercontainerrepository1111
 jobs:
   - job: J1
     pool: Default
@@ -56,8 +56,8 @@ jobs:
       deploy:
        steps:
         - checkout: self
-        # - checkout: githubRepo1
-        # - checkout: bitbucket1
-        # - checkout: AzRepo1
+        - checkout: githubRepo1
+        - checkout: bitbucket1
+        - checkout: AzRepo1
         - powershell: |
             ls $(Build.ArtifactStagingDirectory)/
