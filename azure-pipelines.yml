@@ -53,9 +53,9 @@ jobs:
      runOnce:
       deploy:
        steps:
-        - checkout: self
-        - checkout: githubRepo1
+        # - checkout: self
+        # - checkout: githubRepo1
         - checkout: bitbucket1
-        - checkout: AzRepo1
+        # - checkout: AzRepo1
         - powershell: |
             ls $(Build.ArtifactStagingDirectory)/
