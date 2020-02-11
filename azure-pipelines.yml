@@ -17,8 +17,8 @@ resources:
    - repository: githubRepo1
      type: GitHub
      endpoint: GithubConnection
-     source: jainamanjain/Test2
-     name: jainamanjain/Test2
+     source: amjn/Test2
+     name: amjn/Test2
    - repository: bitbucket1
      type: BitBucket
      endpoint: BitBucketConnection
