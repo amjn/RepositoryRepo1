@@ -14,19 +14,19 @@ resources:
      source: jainamanjain.Test2
 
   repositories:
-  #  - repository: githubRepo1
-  #    type: GitHub
-  #    endpoint: GithubConnection
-  #    source: jainamanjain/Test2
-  #    name: jainamanjain/Test2
+   - repository: githubRepo1
+     type: GitHub
+     endpoint: GithubConnection
+     source: jainamanjain/Test2
+     name: jainamanjain/Test2
    - repository: bitbucket1
      type: BitBucket
      endpoint: BitBucketConnection
      source: amja_bitbucket/bitbucketrepo
      name: amja_bitbucket/bitbucketrepo
-  #  - repository: AzRepo1
-  #    type: git
-  #    name: AzureRepo1
+   - repository: AzRepo1
+     type: git
+     name: AzureRepo1
 
   containers:
   - container: ACRResourceLatest
